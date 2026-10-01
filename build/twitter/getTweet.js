@@ -56,5 +56,7 @@ export async function getTweetCaption(tweetId) {
         "");
 }
 function removeTwitterShortLinks(text) {
+    if (!text)
+        return "";
     return text.replace(/https?:\/\/t\.co\/\w+/g, "").trim();
 }

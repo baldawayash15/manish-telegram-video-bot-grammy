@@ -31,7 +31,7 @@ function uniqByQuality(formats) {
 /* -------------------------------------------------- */
 export async function extractMedia(url) {
     // const { stdout } = await execAsync(`yt-dlp --dump-json "${url}"`);
-    const info = await ytdlp.getInfoAsync(url);
+    const info = (await ytdlp.getInfoAsync(url));
     // const info = JSON.parse(stdout);
     let caption = info.description || "";
     // let caption: any;

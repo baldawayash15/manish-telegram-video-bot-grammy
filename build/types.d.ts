@@ -2,9 +2,9 @@ export type MediaType = "video" | "photo";
 export interface MediaFormat {
     id: string;
     quality: string;
-    url: string;
+    url?: string;
     type: MediaType;
-    height: string;
+    height?: string;
 }
 export interface ExtractedMedia {
     caption: string;
